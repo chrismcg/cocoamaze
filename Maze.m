@@ -39,7 +39,12 @@
     NSMutableArray *col = [NSMutableArray arrayWithCapacity: self.height];
     [_maze insertObject: col atIndex: i];
     for(size_t j = 0; j < self.height; ++j) {
-      [col insertObject: [NSNumber numberWithInt: MazeAllWalls] atIndex: j];
+      int cellType = MazeAllWalls;
+      if (j == 0)               { cellType = cellType | MazeNorthBorder; }
+      if (j == self.height - 1) { cellType = cellType | MazeSouthBorder; }
+      if (i == 0)               { cellType = cellType | MazeWestBorder; }
+      if (i == self.width - 1)  { cellType = cellType | MazeEastBorder; }
+      [col insertObject: [NSNumber numberWithInt: cellType] atIndex: j];
     }
   }
   return _maze;
