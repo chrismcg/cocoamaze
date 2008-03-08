@@ -40,8 +40,6 @@
 		089C166AFE841209C02AAC07 /* CocoaMaze */ = {
 			isa = PBXGroup;
 			children = (
-				83E50F1F0D82D6FE00A9606E /* Maze.h */,
-				83E50F200D82D6FE00A9606E /* Maze.m */,
 				08FB77AFFE84173DC02AAC07 /* Classes */,
 				32C88E010371C26100C91783 /* Other Sources */,
 				089C167CFE841241C02AAC07 /* Resources */,
@@ -72,6 +70,8 @@
 		08FB77AFFE84173DC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				83E50F200D82D6FE00A9606E /* Maze.m */,
+				83E50F1F0D82D6FE00A9606E /* Maze.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
