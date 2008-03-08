@@ -1,22 +1,27 @@
-require 'rubygems'
-require 'spec'
-require 'osx/cocoa'
+require File.dirname(__FILE__) + '/spec_helper'
 
-bundle_path = File.dirname(__FILE__) + '/../build/Debug/CocoaMaze.bundle'
-bundle = OSX::NSBundle.alloc.initWithPath(bundle_path)
-bundle.load
-Maze = bundle.principalClass
+Maze = load_bundle_principle_class('CocoaMaze')
 
 describe Maze, ".alloc.initWithWidth: w height: h" do
   before(:each) do
-    @maze = Maze.alloc.initWithWidth_height(15, 20)
+    @width = 5
+    @height = 7
+    @maze = Maze.alloc.initWithWidth_height(@width, @height)
   end
   
   it "should set the width to the w value" do
-    @maze.width.should == 15
+    @maze.width.should == @width
   end
 
   it "should set the height to the h value" do
-    @maze.height.should == 20
+    @maze.height.should == @height
+  end
+  
+  it "should initialize the maze to all walls" do
+    0.upto(@width - 1) do |i|
+      0.upto(@height - 1) do |j|
+        @maze.cellAtX_Y(i, j).should be_all_walls
+      end
+    end
   end
 end

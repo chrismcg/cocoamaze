@@ -8,13 +8,23 @@
 
 #import <Cocoa/Cocoa.h>
 
+enum _MazeWalls {
+  MazeAllWalls = 15
+};
+typedef NSInteger MazeWalls;
 
 @interface Maze : NSObject {
   int width;
   int height;
+  
+@protected
+  NSMutableArray *maze;
 }
 
 @property int width;
 @property int height;
+@property (retain) NSMutableArray *maze;
 
+- (id)initWithWidth: (int)w height: (int)h;
+- (NSMutableArray *)createMaze;
 @end
