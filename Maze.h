@@ -10,11 +10,11 @@
 
 
 @interface Maze : NSObject {
-//  int width;
-//  int height;
+  int width;
+  int height;
 }
 
-//@property int width;
-//@property int height;
+@property int width;
+@property int height;
 
 @end

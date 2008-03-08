@@ -11,21 +11,21 @@
 
 @implementation Maze
 
-//@synthesize width;
-//@synthesize height;
+@synthesize width;
+@synthesize height;
 
-//- (id)initWithWidth: (int)w height:(int)h   {
-//  [super init];
-//  if (self != nil) {
-//    self.width= w;
-//	self.height = h;
-//  }
-//  return self;
-//}
-//
-//- (id)init {
-//  return [self initWithWidth:10 height:10];
-//}
+- (id)initWithWidth: (int)w height:(int)h   {
+  [super init];
+  if (self != nil) {
+    self.width= w;
+	self.height = h;
+  }
+  return self;
+}
+
+- (id)init {
+  return [self initWithWidth:10 height:10];
+}
 
 - (BOOL)isChunky { return YES; }
 
