@@ -1,10 +1,8 @@
 require File.dirname(__FILE__) + '/spec_helper'
 
-uses_bundle('CocoaMaze')
+uses_bundle('CocoaMaze', :Maze)
 
-Maze = get_class(:Maze)
-
-describe Maze, ".alloc.initWithWidth: w height: h" do
+describe Maze, ".initWithWidth: w height: h" do
   before(:each) do
     @width = 5
     @height = 7
