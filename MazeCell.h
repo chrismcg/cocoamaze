@@ -33,7 +33,6 @@ typedef NSUInteger MazeCellWalls;
 #define BORDER_SETTER(location) - (void)set ## location ## Border: (BOOL)value { value ? (self.data |= Maze ## location ## Border) : (self.data &= ~Maze ## location ## Border); }
 #define BORDER_GETTER(lower_location, location) - (BOOL)lower_location ## Border { return (self.data & Maze ## location ## Border) == Maze ## location ## Border; }
 
-
 @interface MazeCell : NSObject {
 @protected
   NSUInteger data;
@@ -51,6 +50,7 @@ typedef NSUInteger MazeCellWalls;
 @property BOOL southWall;
 @property BOOL eastWall;
 @property BOOL westWall;
+@property (readonly) BOOL isAllWalls;
 
 @property BOOL northBorder;
 @property BOOL southBorder;

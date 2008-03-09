@@ -16,22 +16,3 @@ def get_class(sym)
     end
   end
 end
-
-class BeAllWalls
-  def matches?(actual)
-    @actual = actual
-    @actual.northWall && @actual.southWall && @actual.eastWall && @actual.westWall
-  end
-
-  def failure_message
-    "expected #{@actual} to be all walls, but it wasn't"
-  end
-
-  def negative_failure_message
-    "expected #{@actual} not to all walls, but it was"
-  end
-end
-
-def be_all_walls
-  BeAllWalls.new
-end

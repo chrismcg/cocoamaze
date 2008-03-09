@@ -20,7 +20,7 @@ describe Maze, ".initWithWidth: w height: h" do
   it "should initialize the maze to all walls" do
     0.upto(@width - 1) do |i|
       0.upto(@height - 1) do |j|
-        @maze.cellAtX_Y(i, j).should be_all_walls
+        @maze.cellAtX_Y(i, j).should be_allWalls
       end
     end
   end
