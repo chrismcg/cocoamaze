@@ -24,5 +24,6 @@
 @property (retain) NSMutableArray *maze;
 
 - (id)initWithWidth: (int)w height: (int)h;
-- (MazeCell *)createMaze;
+- (NSMutableArray *)createMaze;
+- (MazeCell *)cellAtX: (int)x Y: (int)y;
 @end
