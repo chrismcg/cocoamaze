@@ -23,6 +23,15 @@ WALL_GETTER(east, East)
 WALL_SETTER(West)
 WALL_GETTER(west, West)
 
+BORDER_SETTER(North)
+BORDER_GETTER(north, North)
+BORDER_SETTER(South)
+BORDER_GETTER(south, South)
+BORDER_SETTER(East)
+BORDER_GETTER(east, East)
+BORDER_SETTER(West)
+BORDER_GETTER(west, West)
+
 - (int)x { return self.location.x; }
 - (int)y { return self.location.y; }
 

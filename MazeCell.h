@@ -17,12 +17,21 @@ enum _MazeCellWalls {
   MazeSouthWall =   4,
   MazeEastWall  =   2,
   MazeWestWall  =   1,
-  MazeAllWalls  =  15
+  MazeAllWalls  =  15,
+
+  MazeNorthBorder =  128,
+  MazeSouthBorder =   64,
+  MazeEastBorder  =   32,
+  MazeWestBorder  =   16,
+  MazeAllBorders  =  255
 };
 typedef NSUInteger MazeCellWalls;
 
 #define WALL_SETTER(location) - (void)set ## location ## Wall: (BOOL)value { value ? (self.data |= Maze ## location ## Wall) : (self.data &= ~Maze ## location ## Wall); }
 #define WALL_GETTER(lower_location, location) - (BOOL)lower_location ## Wall { return (self.data & Maze ## location ## Wall) == Maze ## location ## Wall; }
+
+#define BORDER_SETTER(location) - (void)set ## location ## Border: (BOOL)value { value ? (self.data |= Maze ## location ## Border) : (self.data &= ~Maze ## location ## Border); }
+#define BORDER_GETTER(lower_location, location) - (BOOL)lower_location ## Border { return (self.data & Maze ## location ## Border) == Maze ## location ## Border; }
 
 
 @interface MazeCell : NSObject {
@@ -42,6 +51,11 @@ typedef NSUInteger MazeCellWalls;
 @property BOOL southWall;
 @property BOOL eastWall;
 @property BOOL westWall;
+
+@property BOOL northBorder;
+@property BOOL southBorder;
+@property BOOL eastBorder;
+@property BOOL westBorder;
 
 - (id)initWithPoint: (NSPoint)point;
 @end
