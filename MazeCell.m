@@ -12,24 +12,31 @@
 @implementation MazeCell
 
 @synthesize location;
+@synthesize data;
 
-- (int)x {
-  return self.location.x;
-}
+WALL_SETTER(North)
+WALL_GETTER(north, North)
+WALL_SETTER(South)
+WALL_GETTER(south, South)
+WALL_SETTER(East)
+WALL_GETTER(east, East)
+WALL_SETTER(West)
+WALL_GETTER(west, West)
 
-- (int)y {
-  return self.location.y;
-}
+- (int)x { return self.location.x; }
+- (int)y { return self.location.y; }
 
 - (id)init {
   return [self initWithPoint: NSMakePoint(1, 1)];
 }
 
-- (id)initWithPoint: (NSPoint)p {
+- (id)initWithPoint: (NSPoint)point {
   [super init];
   if (self != nil) {
-    self.location = p;
+    self.location = point;
+    self.data = 0;
   }
   return self;
 }
+
 @end

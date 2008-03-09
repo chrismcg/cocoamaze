@@ -7,18 +7,6 @@
 //
 
 #import <Cocoa/Cocoa.h>
-// Backtrack Solution   Border    Walls
-// 0 0 0 0   0 0 0 0   0 0 0 0   0 0 0 0
-// W S E N   W S E N   W S E N   W S E N
-
-enum _MazeWalls {
-  MazeAllWalls    =  15,
-  MazeNorthBorder =  16,
-  MazeEastBorder  =  32,
-  MazeSouthBorder =  64,
-  MazeWestBorder  = 128
-};
-typedef NSInteger MazeWalls;
 
 @interface Maze : NSObject {
   int width;
