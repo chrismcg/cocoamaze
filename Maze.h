@@ -7,6 +7,9 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "MazeCell.h"
+
+@class MazeCell;
 
 @interface Maze : NSObject {
   int width;
@@ -21,5 +24,5 @@
 @property (retain) NSMutableArray *maze;
 
 - (id)initWithWidth: (int)w height: (int)h;
-- (NSMutableArray *)createMaze;
+- (MazeCell *)createMaze;
 @end

@@ -8,14 +8,13 @@
 
 #import "Maze.h"
 
-
 @implementation Maze
 
 @synthesize width;
 @synthesize height;
 @synthesize maze;
 
-- (NSNumber *)cellAtX: (int)x Y: (int)y {
+- (MazeCell *)cellAtX: (int)x Y: (int)y {
   return [[self.maze objectAtIndex: x] objectAtIndex: y];
 }
 
@@ -39,12 +38,16 @@
     NSMutableArray *col = [NSMutableArray arrayWithCapacity: self.height];
     [_maze insertObject: col atIndex: i];
     for(size_t j = 0; j < self.height; ++j) {
-      int cellType = 0;// MazeAllWalls;
-      //       if (j == 0)               { cellType = cellType | MazeNorthBorder; }
-      //       if (j == self.height - 1) { cellType = cellType | MazeSouthBorder; }
-      //       if (i == 0)               { cellType = cellType | MazeWestBorder; }
-      //       if (i == self.width - 1)  { cellType = cellType | MazeEastBorder; }
-      [col insertObject: [NSNumber numberWithInt: cellType] atIndex: j];
+      MazeCell *cell = [[MazeCell alloc] initWithPoint: NSMakePoint(i, j)];
+      cell.northWall = YES;
+      cell.southWall = YES;
+      cell.eastWall  = YES;
+      cell.westWall  = YES;
+      if (j == 0)               { cell.northBorder = YES; }
+      if (j == self.height - 1) { cell.southBorder = YES; }
+      if (i == 0)               { cell.westBorder  = YES; }
+      if (i == self.width - 1)  { cell.eastBorder  = YES; }
+      [col insertObject: cell atIndex: j];
     }
   }
   return _maze;
