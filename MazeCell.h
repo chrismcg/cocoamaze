@@ -10,7 +10,13 @@
 
 
 @interface MazeCell : NSObject {
-
+@protected
+  NSPoint location;
 }
 
+@property NSPoint location;
+@property (readonly) int x;
+@property (readonly) int y;
+  
+- (id)initWithPoint: (NSPoint)p;
 @end

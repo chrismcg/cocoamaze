@@ -11,4 +11,25 @@
 
 @implementation MazeCell
 
+@synthesize location;
+
+- (int)x {
+  return self.location.x;
+}
+
+- (int)y {
+  return self.location.y;
+}
+
+- (id)init {
+  return [self initWithPoint: NSMakePoint(1, 1)];
+}
+
+- (id)initWithPoint: (NSPoint)p {
+  [super init];
+  if (self != nil) {
+    self.location = p;
+  }
+  return self;
+}
 @end
