@@ -24,7 +24,7 @@ WALL_SETTER(West)
 WALL_GETTER(west, West)
 
 - (BOOL)isAllWalls {
-  [self northWall] && [self southWall] && [self eastWall] && [self westWall];
+  return [self northWall] && [self southWall] && [self eastWall] && [self westWall];
 }
 
 BORDER_SETTER(North)
