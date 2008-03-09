@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		83E50F210D82D6FE00A9606E /* Maze.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E50F200D82D6FE00A9606E /* Maze.m */; };
+		83E510380D835B8800A9606E /* MazeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E510370D835B8800A9606E /* MazeCell.m */; };
 		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -20,6 +21,8 @@
 		32DBCF630370AF2F00C91783 /* CocoaMaze_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaMaze_Prefix.pch; sourceTree = "<group>"; };
 		83E50F1F0D82D6FE00A9606E /* Maze.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Maze.h; sourceTree = "<group>"; };
 		83E50F200D82D6FE00A9606E /* Maze.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Maze.m; sourceTree = "<group>"; };
+		83E510360D835B8800A9606E /* MazeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MazeCell.h; sourceTree = "<group>"; };
+		83E510370D835B8800A9606E /* MazeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MazeCell.m; sourceTree = "<group>"; };
 		8D5B49B6048680CD000E48DA /* CocoaMaze.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CocoaMaze.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
@@ -72,6 +75,8 @@
 			children = (
 				83E50F200D82D6FE00A9606E /* Maze.m */,
 				83E50F1F0D82D6FE00A9606E /* Maze.h */,
+				83E510360D835B8800A9606E /* MazeCell.h */,
+				83E510370D835B8800A9606E /* MazeCell.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -165,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83E50F210D82D6FE00A9606E /* Maze.m in Sources */,
+				83E510380D835B8800A9606E /* MazeCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
